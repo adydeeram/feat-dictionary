@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Dictonary Feat</title>
+  </head>
+
+  <body style="transition: 2s;">
+    <!-- Nav bar  -->
+
+    <div class="">
+      <div class="antialiased bg-gray-300 dark-mode:bg-gray-900">
+        <div
+          class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800"
+        >
+          <div
+            x-data="{ open: true }"
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+          >
+            <div class="flex flex-row items-center justify-between p-4">
+              <a
+                href="#"
+                class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                >Daily Dictonary
+              </a>
+              <button
+                class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                @click="open = !open"
+              >
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                  <path
+                    x-show="!open"
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    x-show="open"
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <nav
+              :class="{'flex': open, 'hidden': !open}"
+              class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+            >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#"
+                >Blog</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#"
+                >Portfolio</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#"
+                >About</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#"
+                >Contact</a
+              >
+              <!--  -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr class="mx-24" />
+
+    <!-- Search section  -->
+    <div class="flex justify-center">
+      <div class="mt-14" style="width: 70%">
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Enter your desire word here</label
+        >
+        <input
+          type="email"
+          id="search"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Enter Here"
+        />
+
+        <!-- <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’ll never share your details. Read our <a href="#"
+                class="font-medium text-blue-600 hover:underline dark:text-blue-500">Privacy Policy</a>.</p> -->
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <hr class="mx-20 shadow-black shadow-xl">
+
+    <!-- Meaning Display Area -->
+
+    <div id="maindiv" class=" flex-col grid-flow-row mx-7 mt-10" style="opacity: 0; transition: 2s;">
+                <div 
+                    class="p-8 space-y-3 border-2 mt-10 border-blue-400 dark:border-blue-300 rounded-xl"
+                    style="width:100%;"
+                >
+                    <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <a
+                    id="audioBtn"
+                    href="#"
+                    class="inline-flex p-2  text-blue-500 capitalize decoration-transparent transition-colors duration-200 transform bg-blue-100 rounded-full dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500"
+                    >
+                      <i class="material-icons">hearing</i>
+
+                    
+                      <span class="border-b-2">Play sound </span>
+                    </a>
+                    </span>
+
+                    <h1 id="word"
+                    class="text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+                    >
+                    elegant Dark Mode
+                    </h1>
+
+                    <div class="text-gray-500 dark:text-gray-300 flex justify-evenly">
+                      <div style="width: 50%;">
+                      <p class="font-bold pb-2 border-b-2">Meaning</p>
+                      <br>
+                      <div id="wordarea"></div>
+                    </div>
+                    <div>
+                      <p class="font-bold pb-2 border-b-2">Psynonymos</p>
+                      <br>
+                      <p id="synonyms"></p>
+                    </div>
+
+                    </div>
+
+                    
+                </div> 
+                
+    </div>
+
+
+
+    <script src="./apiLibrary.js"></script>
+    <script src="/ui.js"></script>
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="../path/to/flowbite/dist/flowbite.js"></script>
+    
+  </body>
+</html>
